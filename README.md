@@ -15,7 +15,7 @@ A web-based interactive game where players spot differences between pairs of ima
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Davidskumar/Spot_The_Difference.git
+   git clone https://github.com/Davidskumar/Spot_The_Difference_Game.git
    cd spot-the-difference
    ```
 
