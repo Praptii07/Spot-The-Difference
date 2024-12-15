@@ -115,3 +115,8 @@ h1 {
         font-size: 12px;  /* Smaller font size on mobile */
     }
 }
+#message {
+    font-size: 24px;  /* Adjust the font size as needed */
+    font-weight: bold;  /* Optional: make the text bold */
+    color: #333;  /* Optional: change text color */
+}
