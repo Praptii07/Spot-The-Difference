@@ -1,7 +1,7 @@
 # Spot the Difference Game
 
 A web-based interactive game where players spot differences between pairs of images. Built with HTML, CSS, and JavaScript, the game dynamically calculates scores, tracks time, and offers customization through an external configuration file.
-
+> ⭐ If you find this project helpful, please star this repository to show your support!
 ## Features
 
 - **Dynamic Image Pairs**: Add as many image pairs as you want through a JSON configuration.
