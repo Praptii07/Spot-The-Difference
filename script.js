@@ -9,7 +9,7 @@ fetch('gameConfig.json')
 let score = 0;
 let differencesFound = 0;
 let totalDifferences = 0;
-let coordinatesEnabled = true; // Track whether coordinates are enabled
+let coordinatesEnabled = false; // Track whether coordinates are enabled
 
 function initGame(config) {
 document.getElementById('gameTitle').textContent = config.gameTitle;
