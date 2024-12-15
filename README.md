@@ -63,8 +63,3 @@ A web-based interactive game where players spot differences between pairs of ima
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests to improve the game.
-
-## Acknowledgments
-
-- Special thanks to contributors and testers for feedback and support.
-- Inspired by classic spot-the-difference games.
