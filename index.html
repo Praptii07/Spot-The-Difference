@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Spot the Difference</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1 id="gameTitle">Spot the Difference</h1>
-    <p class="score">Score: <span id="score">0</span></p>
-    <p>Time Remaining: <span id="timer">60</span> seconds</p>
-    <p id="message"></p>
-    <div class="game-container" id="gameContainer"></div>
-    
-
-    <!-- Toggle Button -->
-    <button id="toggleCoordinatesBtn" class="active">Hide Coordinates</button>
-</body>
+<h1 id="title">Spot the Difference</h1>
+<div id="score">Score: 0</div>
+<div id="message"></div>
+<div id="timer">⏱ Time: 0s</div>
+<div id="game">
+    <div class="image-container" id="img1Container"></div>
+    <div class="image-container" id="img2Container"></div>
+</div>
 <script src="script.js"></script>
-
+</body>
 </html>

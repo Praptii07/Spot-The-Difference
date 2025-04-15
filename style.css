@@ -1,122 +1,117 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* General reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+/* Body styling */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Game title */
 h1 {
-    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
 }
 
-.game-container {
+/* Timer, score, and message styling */
+#score, #timer, #message {
+    margin: 10px;
+    font-size: 1.25rem;
+}
+
+/* Main game container */
+#game {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Space between each pair of images */
-    padding: 20px;
-    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    max-width: 100%;
+    padding: 10px;
+
+    /* Shrink the entire game container */
+    transform: scale(0.75); /* Scale the game container to 75% of its original size */
+    transform-origin: top center; /* Keep the top part of the game fixed */
 }
 
-.image-pair-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Space between image pairs */
-}
-
-.image-wrapper {
+/* Image containers */
+.image-container {
     position: relative;
-    width: 400px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    border: 2px solid #000; /* Always visible border */
-}
-
-/* Apply the clicked border */
-/*.clicked-border {
-    border: 3px solid blue;
-}*/
-
-.image-wrapper img {
     width: 100%;
-    height: 100%;
-    object-fit: contain; /* Preserve aspect ratio */
+    max-width: 400px; /* Half the size of previous image size */
+    height: auto;
+    margin: 0 auto;
 }
 
-.highlight {
+/* Game images */
+.game-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Limit image width */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hotspot circle (red circle when clicked) */
+.click-circle {
     position: absolute;
-    border: 2px solid red;
-    pointer-events: none;
-}
-
-.score {
-    margin: 10px 0;
-}
-
-#timer {
-    font-weight: bold;
-}
-
-#coordinates {
-    position: absolute;
-    color: red;
-    font-size: 14px;
-    pointer-events: none;
-}
-
-/* Adjust image size for smaller screens */
-@media (max-width: 600px) {
-    .image-wrapper {
-        width: 250px;
-        height: 200px;
-    }
-
-    .score, #timer {
-        font-size: 18px;
-    }
-
-    #coordinates {
-        font-size: 12px;
-    }
-}
-
-.red-dot {
-    position: absolute;
-    background-color: red;
     border-radius: 50%;
-    pointer-events: none;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.4); /* Semi-transparent red */
+    z-index: 20;
+    pointer-events: none; /* Make sure the circle doesn't block other clicks */
 }
 
-/* Style for the toggle button */
-#toggleCoordinatesBtn {
+/* Hotspot markers (invisible until clicked) */
+.hotspot {
     position: absolute;
-    top: 5%;   /* Adjust position dynamically */
-    right: 5%; /* Adjust position dynamically */
-    padding: 8px 12px; /* Slightly smaller padding */
-    font-size: 14px;  /* Smaller font size */
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    border: 2px solid transparent;
     cursor: pointer;
-    border-radius: 5px; /* Add rounded corners for a cleaner look */
-    transition: background-color 0.3s ease; /* Smooth color transition */
+    z-index: 10;
 }
 
-/* Change the color when the button is active */
-#toggleCoordinatesBtn.active {
-    background-color: #f44336;
-}
-
-/* Make the button size relative to the viewport */
+/* Responsive design for smaller devices */
 @media (max-width: 600px) {
-    #toggleCoordinatesBtn {
-        padding: 6px 10px; /* Adjust for smaller screens */
-        font-size: 12px;  /* Smaller font size on mobile */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #score, #timer, #message {
+        font-size: 1rem;
+    }
+
+    #game {
+        flex-direction: column;
+    }
+
+    .image-container {
+        max-width: 90%; /* Adjust for smaller screens */
+    }
+
+    .game-image {
+        max-width: 90%; /* Adjust image size for smaller screens */
     }
 }
-#message {
-    font-size: 24px;  /* Adjust the font size as needed */
-    font-weight: bold;  /* Optional: make the text bold */
-    color: #333;  /* Optional: change text color */
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    #score, #timer, #message {
+        font-size: 0.875rem;
+    }
+
+    #game {
+        padding: 0 10px;
+    }
 }
