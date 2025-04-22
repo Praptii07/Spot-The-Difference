@@ -1,12 +1,12 @@
 {
   "gameTitle": "Spot the Difference - Animal",
   "images": {
-    "image1": "images/image1.png",
-    "image2": "images/image2.png"
+    "image1": "images/image1.webp",
+    "image2": "images/image2.webp"
   },
   "differences": [
-    { "x": 100, "y": 80, "width": 40, "height": 40 },
-    { "x": 210, "y": 170, "width": 35, "height": 35 },
-    { "x": 330, "y": 260, "width": 30, "height": 30 }
+    { "x": 100, "y": 200, "width": 50, "height": 50 },
+    { "x": 300, "y": 150, "width": 40, "height": 40 },
+    { "x": 500, "y": 300, "width": 30, "height": 30 }
   ]
 }
